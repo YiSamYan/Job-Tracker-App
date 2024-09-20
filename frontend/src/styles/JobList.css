@@ -1,0 +1,168 @@
+.job-list {
+  width: 100%;
+  max-width: 925px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #444c53;
+}
+
+.job-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.job-item.slide-out {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.job-item:not(.slide-out) {
+  transition: transform 0.3s ease, margin-bottom 0.3s ease;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.job-info {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.job-title,
+.job-company,
+.job-status {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.job-title {
+  flex: 1;
+  text-align: left;
+}
+
+.job-company {
+  flex: 1;
+}
+
+.job-status {
+  text-align: right;
+}
+
+.job-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.edit-btn,
+.delete-btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  border-color: #2196f3;
+  color: dodgerblue;
+}
+
+.edit-btn:hover {
+  background: #2196f3;
+  color: white;
+}
+
+.delete-btn {
+  border-color: #f44336;
+  color: red;
+}
+
+.delete-btn:hover {
+  background: #f44336;
+  color: white;
+}
+
+.job-description {
+  padding: 15px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+.job-description h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.job-description p {
+  font-size: 16px;
+  color: #666;
+}
+
+.job-dates {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.job-header:hover {
+  background-color: #eee;
+}
+
+.job-item.expanded .job-description {
+  display: block;
+}
+
+.job-header.n-a {
+  background-color: #b0b0b0;
+  color: white;
+}
+
+.job-header.applied {
+  background-color: #ff7b00;
+  color: white;
+}
+
+.job-header.interviewing {
+  background-color: #2196f3;
+  color: white;
+}
+
+.job-header.rejected {
+  background-color: #f44336;
+  color: white;
+}
+
+.job-header.offered {
+  background-color: #4caf50;
+  color: black;
+}

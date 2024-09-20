@@ -1,0 +1,10 @@
+.import-jobs-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.import-jobs-container input[type="file"] {
+  display: block;
+  margin-top: 10px;
+}

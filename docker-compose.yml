@@ -1,0 +1,61 @@
+services:
+  # Frontend service (React)
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    env_file:
+      - ./.env.docker
+    networks:
+      - app-network
+
+  # Backend service (Django)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    links:
+      - db:db
+    restart: unless-stopped
+    env_file:
+      - ./.env.docker
+    networks:
+      - app-network
+
+  # PostgreSQL database
+  db:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - ./.env.docker
+    networks:
+      - app-network
+
+  cypress:
+    build:
+      context: .
+      dockerfile: Dockerfile.cypress
+    networks:
+      - app-network
+    depends_on:
+      - frontend
+    command: ["npx", "cypress", "run"]
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,50 @@
+version: 2.1
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/node:16.16
+    steps:
+      - checkout
+
+      # Install Docker Compose
+      - run:
+          name: Install Docker Compose
+          command: |
+            sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            sudo chmod +x /usr/local/bin/docker-compose
+
+      # Set up Docker environment for backend and frontend services
+      - setup_remote_docker:
+          version: "default"
+          docker_layer_caching: true
+
+      # Build and run the services
+      - run:
+          name: Build and Start Docker Services
+          command: docker-compose up -d --build
+
+      # Wait for Backend
+      - run:
+          name: Wait for Backend
+          command: docker-compose exec frontend sh -c 'until nc -zv backend 8000; do sleep 1; done'
+
+      # Run Cypress tests
+      - run:
+          name: Run Cypress Tests
+          command: docker-compose run cypress
+
+      # Shut down Docker Compose after tests
+      - run:
+          name: Stop Docker Containers
+          command: docker-compose down
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build-and-test
+
+services:
+  docker:
+    image: circleci/postgres:latest

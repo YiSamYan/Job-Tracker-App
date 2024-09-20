@@ -1,0 +1,324 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": "Tech Solutions",
+    "status": "applied",
+    "description": "Develop and maintain software applications.",
+    "requirements": "3+ years experience with JavaScript and Python."
+  },
+  {
+    "title": "Backend Developer",
+    "company": "Innovative Corp",
+    "status": "interviewing",
+    "description": "Responsible for server-side development.",
+    "requirements": "Experience with Node.js and Express."
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Creative Agency",
+    "status": "n/a",
+    "description": "Build user-facing features using React.",
+    "requirements": "Strong knowledge of CSS and HTML."
+  },
+  {
+    "title": "Data Scientist",
+    "company": "DataWorks",
+    "status": "applied",
+    "description": "Analyze and interpret complex data sets.",
+    "requirements": "Proficiency in Python, R, and SQL."
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "Cloud Solutions",
+    "status": "offered",
+    "description": "Automate and manage infrastructure.",
+    "requirements": "Experience with Docker, Kubernetes, and AWS."
+  },
+  {
+    "title": "Mobile Developer",
+    "company": "App Innovations",
+    "status": "rejected",
+    "description": "Build and maintain mobile applications.",
+    "requirements": "Proficiency in Flutter and Dart."
+  },
+  {
+    "title": "UX/UI Designer",
+    "company": "Design Studio",
+    "status": "interviewing",
+    "description": "Design intuitive user interfaces.",
+    "requirements": "Experience with Adobe XD and Figma."
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "AI Ventures",
+    "status": "applied",
+    "description": "Develop and deploy machine learning models.",
+    "requirements": "Experience with TensorFlow and PyTorch."
+  },
+  {
+    "title": "Project Manager",
+    "company": "PM Consultancy",
+    "status": "applied",
+    "description": "Lead and manage software development projects.",
+    "requirements": "PMP certification preferred."
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "Tech Stack Inc",
+    "status": "n/a",
+    "description": "Work on both frontend and backend.",
+    "requirements": "Experience with MERN stack."
+  },
+  {
+    "title": "Product Manager",
+    "company": "Innovative Solutions",
+    "status": "offered",
+    "description": "Drive product development and strategy.",
+    "requirements": ""
+  },
+  {
+    "title": "QA Engineer",
+    "company": "TestPro",
+    "status": "interviewing",
+    "description": "Ensure software quality through testing.",
+    "requirements": "Experience with Selenium and automated testing tools."
+  },
+  {
+    "title": "Systems Analyst",
+    "company": "TechSoft",
+    "status": "rejected",
+    "description": "Analyze and improve IT systems.",
+    "requirements": "Knowledge of ERP systems."
+  },
+  {
+    "title": "Database Administrator",
+    "company": "DataSecure",
+    "status": "applied",
+    "description": "Manage and optimize databases.",
+    "requirements": "Experience with MySQL and PostgreSQL."
+  },
+  {
+    "title": "Security Engineer",
+    "company": "CyberSecure",
+    "status": "n/a",
+    "description": "Implement and maintain security protocols.",
+    "requirements": "Knowledge of network security and encryption."
+  },
+  {
+    "title": "Business Analyst",
+    "company": "Biz Solutions",
+    "status": "applied",
+    "description": "Analyze business processes and recommend solutions.",
+    "requirements": "Experience with Agile methodologies."
+  },
+  {
+    "title": "IT Support Specialist",
+    "company": "HelpDesk Solutions",
+    "status": "offered",
+    "description": "Provide technical support to clients.",
+    "requirements": ""
+  },
+  {
+    "title": "Network Engineer",
+    "company": "NetPro",
+    "status": "applied",
+    "description": "Design and manage network infrastructure.",
+    "requirements": "Experience with Cisco systems."
+  },
+  {
+    "title": "Cloud Architect",
+    "company": "CloudOps",
+    "status": "applied",
+    "description": "Design and implement cloud solutions.",
+    "requirements": "Experience with AWS and Azure."
+  },
+  {
+    "title": "Technical Writer",
+    "company": "DocuTech",
+    "status": "rejected",
+    "description": "Create technical documentation for software.",
+    "requirements": "Excellent writing and communication skills."
+  },
+  {
+    "title": "Scrum Master",
+    "company": "AgilePro",
+    "status": "applied",
+    "description": "Lead and facilitate Scrum processes.",
+    "requirements": "Certified Scrum Master (CSM) preferred."
+  },
+  {
+    "title": "Frontend Engineer",
+    "company": "Web Innovators",
+    "status": "applied",
+    "description": "Develop user interfaces with React.",
+    "requirements": ""
+  },
+  {
+    "title": "Salesforce Developer",
+    "company": "SalesPro",
+    "status": "offered",
+    "description": "Customize and develop Salesforce applications.",
+    "requirements": "Experience with Salesforce CRM."
+  },
+  {
+    "title": "Android Developer",
+    "company": "AppTech",
+    "status": "interviewing",
+    "description": "Develop Android applications.",
+    "requirements": "Proficiency in Kotlin and Java."
+  },
+  {
+    "title": "Solutions Architect",
+    "company": "Enterprise Solutions",
+    "status": "n/a",
+    "description": "Design and implement enterprise solutions.",
+    "requirements": "Experience with enterprise architecture frameworks."
+  },
+  {
+    "title": "Game Developer",
+    "company": "Game Studio",
+    "status": "applied",
+    "description": "Design and develop video games.",
+    "requirements": "Experience with Unity or Unreal Engine."
+  },
+  {
+    "title": "Data Engineer",
+    "company": "Big Data Solutions",
+    "status": "n/a",
+    "description": "Develop data pipelines and ETL processes.",
+    "requirements": "Experience with Hadoop and Spark."
+  },
+  {
+    "title": "Blockchain Developer",
+    "company": "CryptoTech",
+    "status": "applied",
+    "description": "Develop blockchain-based applications.",
+    "requirements": "Knowledge of Ethereum and smart contracts."
+  },
+  {
+    "title": "AI Researcher",
+    "company": "AI Labs",
+    "status": "interviewing",
+    "description": "Conduct research on artificial intelligence.",
+    "requirements": "PhD in AI or related field."
+  },
+  {
+    "title": "Penetration Tester",
+    "company": "CyberSecure",
+    "status": "rejected",
+    "description": "Conduct security assessments and penetration tests.",
+    "requirements": "Knowledge of ethical hacking techniques."
+  },
+  {
+    "title": "iOS Developer",
+    "company": "App Solutions",
+    "status": "applied",
+    "description": "Develop iOS applications using Swift.",
+    "requirements": ""
+  },
+  {
+    "title": "Cloud Engineer",
+    "company": "CloudOps",
+    "status": "applied",
+    "description": "Build and manage cloud infrastructure.",
+    "requirements": "Experience with AWS and Terraform."
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "company": "WebWorks",
+    "status": "n/a",
+    "description": "Ensure reliability and performance of services.",
+    "requirements": ""
+  },
+  {
+    "title": "Agile Coach",
+    "company": "AgilePro",
+    "status": "offered",
+    "description": "Coach teams in Agile best practices.",
+    "requirements": "Experience as Scrum Master or Agile Coach."
+  },
+  {
+    "title": "Graphic Designer",
+    "company": "Creative Agency",
+    "status": "n/a",
+    "description": "Design visual assets for marketing campaigns.",
+    "requirements": "Proficiency in Adobe Creative Suite."
+  },
+  {
+    "title": "Robotics Engineer",
+    "company": "Automation Inc",
+    "status": "interviewing",
+    "description": "Design and build robotic systems.",
+    "requirements": "Experience with ROS and hardware integration."
+  },
+  {
+    "title": "Data Analyst",
+    "company": "Data Analytics Inc",
+    "status": "applied",
+    "description": "Analyze and report on data trends.",
+    "requirements": "Proficiency in SQL and Excel."
+  },
+  {
+    "title": "VR Developer",
+    "company": "Virtual Solutions",
+    "status": "n/a",
+    "description": "Develop virtual reality applications.",
+    "requirements": "Experience with VR development frameworks."
+  },
+  {
+    "title": "Marketing Manager",
+    "company": "Marketing Experts",
+    "status": "offered",
+    "description": "Lead marketing strategies and campaigns.",
+    "requirements": ""
+  },
+  {
+    "title": "SEO Specialist",
+    "company": "SearchMax",
+    "status": "applied",
+    "description": "Optimize websites for search engines.",
+    "requirements": "Experience with Google Analytics and SEO tools."
+  },
+  {
+    "title": "Social Media Manager",
+    "company": "SocialBuzz",
+    "status": "interviewing",
+    "description": "Manage social media platforms and campaigns.",
+    "requirements": "Proficiency in social media management tools."
+  },
+  {
+    "title": "Cybersecurity Analyst",
+    "company": "CyberSecure",
+    "status": "applied",
+    "description": "Monitor and respond to security threats.",
+    "requirements": "Knowledge of SIEM tools and incident response."
+  },
+  {
+    "title": "UI Developer",
+    "company": "WebWorks",
+    "status": "n/a",
+    "description": "Develop user interfaces using HTML, CSS, and JavaScript.",
+    "requirements": ""
+  },
+  {
+    "title": "System Administrator",
+    "company": "TechSoft",
+    "status": "offered",
+    "description": "Manage and maintain IT systems.",
+    "requirements": "Experience with Linux and Windows Server."
+  },
+  {
+    "title": "Python Developer",
+    "company": "CodeBase Inc",
+    "status": "applied",
+    "description": "Develop backend services in Python.",
+    "requirements": "Strong knowledge of Python and Flask."
+  },
+  {
+    "title": "IT Consultant",
+    "company": "Tech Consultancy",
+    "status": "rejected",
+    "description": "Provide expert advice on IT solutions.",
+    "requirements": "Experience in multiple IT domains."
+  }
+]

@@ -1,0 +1,23 @@
+# Start with a Node.js image
+FROM cypress/included:latest
+
+# Set working directory inside the container
+WORKDIR /test
+
+# Copy package.json and package-lock.json to install dependencies
+COPY ./frontend/package*.json ./
+
+# Install dependencies (including Cypress)
+RUN npm install
+
+# Copy the rest of the frontend code into the container
+COPY ./frontend .
+
+# Ensure the Cypress base URL is set to the correct one
+ENV CYPRESS_baseUrl=http://frontend:80
+
+# Expose necessary ports
+EXPOSE 80
+
+# Default command to run Cypress tests
+CMD ["npx", "cypress", "run"]

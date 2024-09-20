@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+
+# Django specific
+*.log
+staticfiles/
+mediafiles/
+db.sqlite3
+
+# Docker
+postgres_data/
