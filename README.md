@@ -10,6 +10,7 @@
 <div align="center">
   <a href="https://github.com/YiSamYan/Job-Tracker-App">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <a href="http://98.81.23.109/login">Hosted On AWS ECS</a>
   </a>
 
 ![Job Tracker Screen Shot](images/screenshot.png)
