@@ -10,8 +10,8 @@
 <div align="center">
   <a href="https://github.com/YiSamYan/Job-Tracker-App">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-    <a href="http://98.81.23.109/login">Hosted On AWS ECS</a>
   </a>
+  <a href="http://54.144.220.221/login">Hosted On AWS ECS</a>
 
 ![Job Tracker Screen Shot](images/screenshot.png)
 
@@ -48,7 +48,19 @@
 
 ## About The Project
 
-A simple Job Tracker to help with logging job applications. Add, Edit and Delete components like Job Title, Company, and Application Status.
+The Job Tracker App is a comprehensive, full-stack application designed to help users efficiently manage and track their job applications. Built with a React frontend and a Django backend, the app simplifies the process of organizing and monitoring job applications by providing an intuitive interface and essential tools for creating, updating, deleting, and organizing job listings.
+
+While the application originally included a web scraping feature to automatically fetch job details from platforms like LinkedIn and Indeed, this feature is currently disabled due to restrictions and blocks on scraping requests by those sites. However, the app still provides a smooth user experience through manual entry and bulk import options.
+
+Key Features:
+
+- User Authentication: Secure user sign-up and login, powered by JWT authentication.
+- Job Management: Full CRUD functionality to create, update, delete, and view job applications, with an option to import jobs from external JSON files.
+- Advanced Search & Filter: Easily sort, search, and paginate through job listings for fast access to specific applications.
+- Responsive Design: Optimized for mobile and desktop devices, ensuring an enhanced user experience across platforms.
+- Containerized Deployment: Fully containerized using Docker and Docker Compose for seamless development and deployment, with hosting on AWS ECS.
+
+This project is designed for job seekers looking for a straightforward yet powerful tool to manage their job search, with a focus on user-friendly interfaces and modern web technologies.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,6 +233,11 @@ Response:
 <!-- ROADMAP -->
 
 ## Roadmap
+
+- [ ] Favorite/Pin Jobs Feature
+- [ ] Indeed/Linkin Backend API Integration
+- [ ] Download json txt of JOb lIst
+- [ ] Archive Feature
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
