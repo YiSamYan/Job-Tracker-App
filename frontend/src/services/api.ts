@@ -2,7 +2,9 @@ import axios from "axios";
 
 // Base URL for the API
 const API_URL =
-  process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/api";
+  window.location.hostname === "localhost"
+    ? "http://localhost:8000/api"
+    : process.env.REACT_APP_BACKEND_URL;
 
 // Create an axios instance with the base URL
 const api = axios.create({
@@ -89,9 +91,16 @@ export const scrapeJob = async (jobUrl: string) => {
   try {
     const response = await api.post("/jobs/scrape/", { url: jobUrl });
     return response.data;
-  } catch (error) {
-    console.error("Error scraping job details:", error);
-    throw error;
+  } catch (error: any) {
+    if (error.response) {
+      console.error("Error scraping job details:", error.response.data);
+      throw new Error(
+        error.response.data.error || "Error scraping job details."
+      );
+    } else {
+      console.error("Network or other error:", error);
+      throw new Error("Network error. Please try again.");
+    }
   }
 };
 

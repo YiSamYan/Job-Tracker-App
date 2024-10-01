@@ -14,7 +14,10 @@ interface AuthContextProps {
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-const apiUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/api";
+const apiUrl =
+  window.location.hostname === "localhost"
+    ? "http://localhost:8000/api"
+    : process.env.REACT_APP_BACKEND_URL;
 
 export const AuthProvider: React.FC<AuthContextProps> = ({ children }) => {
   const [user, setUser] = useState<any>(null);

@@ -1,5 +1,5 @@
 # Stage 1: Base dependencies and Chrome installation
-FROM python:3.10-slim as base
+FROM python:3.10-slim AS base
 
 # Install required dependencies and clean up unnecessary files
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -23,7 +23,7 @@ RUN wget -q https://storage.googleapis.com/chrome-for-testing-public/$CHROMEDRIV
     && rm chromedriver-linux64.zip
 
 # Stage 2: Application dependencies
-FROM base as app
+FROM base AS app
 
 RUN apt-get update && apt-get install -y libpq-dev
 

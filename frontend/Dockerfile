@@ -1,5 +1,5 @@
 # Stage 1: Build the React app
-FROM node:16-alpine as build
+FROM node:16-alpine AS build
 
 # Set working directory
 WORKDIR /app
@@ -20,7 +20,7 @@ COPY ./.env.docker .env
 RUN npm run build
 
 # Stage 2: Serve the React app with nginx for production
-FROM nginx:alpine as production
+FROM nginx:alpine AS production
 
 # Copy the built React app from the previous stage
 COPY --from=build /app/build /usr/share/nginx/html

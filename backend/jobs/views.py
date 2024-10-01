@@ -2,9 +2,13 @@ from rest_framework import generics, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .models import Job
+from .models import Job, ScrapingRequest
 from .serializers import JobSerializer
 from .utils import scrape_job_details
+from django.utils import timezone
+from django.http import JsonResponse
+
+MAX_REQUESTS_PER_DAY = 3
 
 # List and create jobs specific to the authenticated user
 class JobListCreateView(generics.ListCreateAPIView):
@@ -31,13 +35,27 @@ class JobRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 @api_view(['GET', 'POST'])
 def scrape_job(request):
     url = request.data.get('url')
+    user = request.user
+
+    scraping_request, created = ScrapingRequest.objects.get_or_create(
+        user=user,
+        defaults={'last_request_date': timezone.now().date()}
+    )
+    scraping_request.reset_daily_count()
+    
+    if scraping_request.request_count >= MAX_REQUESTS_PER_DAY:
+        return JsonResponse({
+            'error': 'You have reached your daily limit of 3 scraping requests.'
+        }, status=403)
+
     if not url:
         return Response({'error': 'No URL provided.'}, status=status.HTTP_400_BAD_REQUEST)
 
     try:
+        scraping_request.increment_count()
         job_details = scrape_job_details(url)
         return Response(job_details, status=status.HTTP_200_OK)
     except ValueError as e:
         return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
     except Exception as e:
-        return Response({'error': 'An error occurred while scraping.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

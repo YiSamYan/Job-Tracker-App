@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils import timezone
 
 class Job(models.Model):
     STATUS_CHOICES = [
@@ -25,3 +26,23 @@ class Job(models.Model):
 
     def __str__(self):
         return self.title
+
+class ScrapingRequest(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="scraping_requests")
+    request_count = models.IntegerField(default=0)
+    last_request_date = models.DateField()
+
+    def reset_daily_count(self):
+        """Resets the request count if the day has changed."""
+        if self.last_request_date != timezone.now().date():
+            self.request_count = 0
+            self.last_request_date = timezone.now().date()
+            self.save()
+
+    def increment_count(self):
+        """Increments the request count."""
+        self.request_count += 1
+        self.save()
+
+    def __str__(self):
+        return f"Requests by {self.user.username}: {self.request_count} on {self.last_request_date}"

@@ -11,9 +11,9 @@
   <a href="https://github.com/YiSamYan/Job-Tracker-App">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
-  <a href="http://54.144.220.221/login">Hosted On AWS ECS</a>
 
 ![Job Tracker Screen Shot](images/screenshot.png)
+<a href="http://54.144.220.221/login">Hosted On AWS ECS</a>
 
 <h3 align="center">Job Tracker App</h3>
 
@@ -104,6 +104,7 @@ Before you begin, ensure you have met the following requirements:
    ```
 2. Configure Environment Variables
    a. Make sure to configure the `.env.docker` file to fit your setup and also the `.env` in the \backend\backend folder
+   b. Make sure to add OPEN_AI_KEY to `.env.docker` to use the scraping tool
 
 3. Set up your venv
 
@@ -197,6 +198,8 @@ This application includes a web scraping feature that automatically pulls job de
 
 1. Selenium is used to render the dynamic content of the job posting pages.
 2. BeautifulSoup is used to parse the rendered HTML and extract relevant job information.
+3. Passed to ChatGPT in order to help organize the information
+4. Received info from CHATGPT and populate the corresponding inputs
 
 To use the web scraping feature:
 
@@ -211,7 +214,7 @@ POST Request to /api/scrape-job/
 
 ```json
 {
-  "url": "https://www.indeed.com/...."
+  "url": "https://yisamyan.github.io/Job-Tracker-Scraping/"
 }
 ```
 
@@ -236,7 +239,7 @@ Response:
 
 - [ ] Favorite/Pin Jobs Feature
 - [ ] Indeed/Linkin Backend API Integration
-- [ ] Download json txt of JOb lIst
+- [ ] Download json txt of Job List
 - [ ] Archive Feature
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

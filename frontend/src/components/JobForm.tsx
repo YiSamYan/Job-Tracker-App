@@ -33,6 +33,8 @@ const JobForm: React.FC = () => {
   const displayUpdatedAt = job.updated_at
     ? new Date(job.updated_at).toLocaleString()
     : new Date().toLocaleString();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (id) {
@@ -79,15 +81,18 @@ const JobForm: React.FC = () => {
 
   // Scrape job given an url !!!Important!!! Does not work due to Job sites blocking Scraping
   const handleScrape = async () => {
+    setLoading(true);
+    setError("");
     try {
       const scrapedData = await scrapeJob(jobUrl);
-      const { title, company, description } = scrapedData;
-      setJob({ ...job, title, company, description });
-    } catch (error) {
-      console.error("Error scraping job details:", error);
-      alert(
-        "Failed to scrape job details. Please check the URL and try again."
+      const { title, company, description, requirements } = scrapedData;
+      setJob({ ...job, title, company, description, requirements });
+    } catch (err: any) {
+      setError(
+        err.message || "An error occurred while scraping the job details."
       );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -103,8 +108,17 @@ const JobForm: React.FC = () => {
           ""
         ) : (
           <div className="form-group">
-            <label>Job Posting URL:</label>
+            <label>
+              Job Posting URL:
+              {loading && (
+                <span
+                  className="loading-spinner"
+                  style={{ marginLeft: "10px" }}
+                ></span>
+              )}
+            </label>
             <input
+              id="scraping_url"
               type="text"
               value={jobUrl}
               onChange={(e) => setJobUrl(e.target.value)}
@@ -113,6 +127,9 @@ const JobForm: React.FC = () => {
             <button type="button" onClick={handleScrape}>
               Scrape Job Details
             </button>
+            {error && (
+              <div style={{ color: "red", marginTop: "10px" }}>{error}</div>
+            )}
           </div>
         )}
         <div className="form-group">
