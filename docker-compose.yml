@@ -29,7 +29,7 @@ services:
     env_file:
       - ./.env.docker
     environment:
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPEN_AI_KEY=${OPEN_AI_KEY}
     networks:
       - app-network
 
