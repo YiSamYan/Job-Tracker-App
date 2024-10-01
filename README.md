@@ -13,7 +13,7 @@
   </a>
 
 ![Job Tracker Screen Shot](images/screenshot.png)
-<a href="http://54.144.220.221/login">Hosted On AWS ECS</a>
+<a href="http://44.202.219.13/login">Hosted On AWS ECS</a>
 
 <h3 align="center">Job Tracker App</h3>
 
@@ -94,7 +94,7 @@ Before you begin, ensure you have met the following requirements:
 ### For Web Scraping Feature
 
 - **Google Chrome** and **ChromeDriver**: Installed in the Docker container.
-- **Selenium** and **BeautifulSoup**: Installed as Python dependencies for the Django backend.
+- **Selenium**, **BeautifulSoup**, and **OpenAI**: Installed as Python dependencies for the Django backend.
 
 ### Installation
 

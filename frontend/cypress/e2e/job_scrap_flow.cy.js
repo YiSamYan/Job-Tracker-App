@@ -11,7 +11,7 @@ describe("Job Tracker Full Flow", () => {
   const jobRequirements =
     "Current college enrollment in degree programs such as Computer Science, Systems Engineering, Electrical Engineering, Computer Engineering, Information Technology, Management Information Systems, Cyber Security or related discipline. Familiar with one or more of the following: C, C++, C#, Java, XML, Windows, .NET, and UNIX, system software and scripting development, Java programming, web development, System analysis, System design, Software Design, Software Development and Implementation, Software Test or Cyber Security, or related programming. Must be a US Citizen; this position will require a government security clearance.";
 
-  it("should sign up, login, add a job, edit it, and delete it", () => {
+  it("should sign up, login, scrape a job, edit it, and delete it", () => {
     // Visit the signup page
     cy.visit("/signup");
 
