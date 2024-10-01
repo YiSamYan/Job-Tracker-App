@@ -50,7 +50,7 @@
 
 The Job Tracker App is a comprehensive, full-stack application designed to help users efficiently manage and track their job applications. Built with a React frontend and a Django backend, the app simplifies the process of organizing and monitoring job applications by providing an intuitive interface and essential tools for creating, updating, deleting, and organizing job listings.
 
-While the application originally included a web scraping feature to automatically fetch job details from platforms like LinkedIn and Indeed, this feature is currently disabled due to restrictions and blocks on scraping requests by those sites. However, the app still provides a smooth user experience through manual entry and bulk import options.
+While the application originally included a web scraping feature to automatically fetch job details from platforms, but this feature does not work for some sites due to restrictions and blocks on scraping requests by those sites. However, the app still provides a smooth user experience through manual entry and bulk import options.
 
 Key Features:
 
@@ -175,7 +175,7 @@ To deactive, just run: deactivate
 ]
 ```
 
-- Web scraping integration for job details (LinkedIn and Indeed)
+- Web scraping integration for job details
 - JWT authentication with user signup and login
 - Responsive UI built with React
 - Sorting, searching, and pagination of job listings
@@ -194,7 +194,8 @@ Input information into the fields as desired. (Title, Company, Status, and Descr
 Option to also import a list of jobs provided
 
 Web Scraping Feature
-This application includes a web scraping feature that automatically pulls job details (title, company, description) from job postings on Indeed and LinkedIn.
+This application includes a web scraping feature that automatically pulls job details (title, company, description) from job posting urls.
+(will not work with sites that blocks scraping requests)
 
 1. Selenium is used to render the dynamic content of the job posting pages.
 2. BeautifulSoup is used to parse the rendered HTML and extract relevant job information.
