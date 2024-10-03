@@ -13,7 +13,7 @@
   </a>
 
 ![Job Tracker Screen Shot](images/screenshot.png)
-<a href="http://44.202.219.13/login">Hosted On AWS ECS</a>
+<a href="http://dh4d781ylkrf.cloudfront.net/login">Frontend hosted on S3 and Backend on EC2</a>
 
 <h3 align="center">Job Tracker App</h3>
 
