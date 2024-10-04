@@ -34,6 +34,11 @@ jobs:
           name: Run Cypress Tests
           command: docker-compose run cypress
 
+      - run:
+          name: Check Backend Logs
+          when: always
+          command: docker-compose logs backend
+
       # Shut down Docker Compose after tests
       - run:
           name: Stop Docker Containers
