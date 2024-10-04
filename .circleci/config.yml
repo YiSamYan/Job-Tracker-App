@@ -29,14 +29,15 @@ jobs:
           name: Wait for Backend
           command: docker-compose exec frontend sh -c 'until nc -zv backend 8000; do sleep 1; done'
 
-      - run:
-          name: Check environment variables in container
-          command: docker-compose exec backend env
-
       # Run Cypress tests
       - run:
           name: Run Cypress Tests
           command: docker-compose run cypress
+
+      - run:
+          name: Check Backend Logs
+          when: always
+          command: docker-compose logs backend
 
       # Shut down Docker Compose after tests
       - run:
