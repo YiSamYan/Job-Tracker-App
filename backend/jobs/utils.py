@@ -61,7 +61,7 @@ def query_chatgpt(page_text):
 
         # Attempt to parse the response as JSON
         try:
-            job_details = json.loads(result_text)
+            job_details = json.loads(result_text.replace("'", "\""))
             return job_details
         except json.JSONDecodeError as e:
             logger.error(f"Failed to decode ChatGPT response as JSON: {str(e)}")
