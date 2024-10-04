@@ -65,7 +65,7 @@ def query_chatgpt(page_text):
             return job_details
         except json.JSONDecodeError as e:
             logger.error(f"Failed to decode ChatGPT response as JSON: {str(e)}")
-            logger.info(f"ChatGPT raw response: {result_text}")
+            logger.info(f"ChatGPT json response: {result_text.replace("'", "\"")}")
             return "Error: ChatGPT response could not be parsed as a valid job description."
 
     except Exception as e:
