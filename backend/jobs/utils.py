@@ -59,13 +59,15 @@ def query_chatgpt(page_text):
         if "not valid" in result_text.lower() or "cannot be processed" in result_text.lower():
             return "Not valid/cannot be processed. Please note certain websites block scraping attempts."
 
+        format_text = result_text.replace("'", "\"")
+
         # Attempt to parse the response as JSON
         try:
-            job_details = json.loads(result_text.replace("'", "\""))
+            job_details = json.loads(format_text)
             return job_details
         except json.JSONDecodeError as e:
             logger.error(f"Failed to decode ChatGPT response as JSON: {str(e)}")
-            logger.info(f"ChatGPT json response: {result_text.replace("'", "\"")}")
+            logger.info(f"ChatGPT json response: {format_text}")
             return "Error: ChatGPT response could not be parsed as a valid job description."
 
     except Exception as e:
