@@ -13,7 +13,7 @@
   </a>
 
 ![Job Tracker Screen Shot](images/screenshot.png)
-<a href="http://d1cz0dyzmmvojm.cloudfront.net">Frontend hosted on S3 and Backend on EC2</a>
+<a href="http://jobtrackerfrontend.s3-website-us-east-1.amazonaws.com/login">Frontend hosted on S3 and Backend on EC2</a>
 
 <h3 align="center">Job Tracker App</h3>
 
